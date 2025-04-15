@@ -1,0 +1,16 @@
+cvm-version: 0.0.19
+ovmf-version: 0.0.2
+cpus: 8
+memory: 32768
+
+models:
+  - id: deepseek-r1:70b
+    mpk: a85fbd8b2a941253a4add3ff333ec17096f7fcf1036c7603f46390145053623b-42520403968
+
+shim:
+  domains:
+    - deepseek-r1-70b-prod.model.tinfoil.sh
+  listen-port: 443
+  upstream-port: 11434
+  paths:
+    - /v1/chat/completions
