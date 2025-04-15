@@ -4,14 +4,14 @@ cpus: 8
 memory: 32768
 
 models:
-  - name: "deepseek-r1-70b-64k"
+  - name: "deepseek-r1-70b"
     repo: "casperhansen/deepseek-r1-distill-llama-70b-awq@a1ab7653aae77fbabc536cbcbac5bb2e2fb5354f"
     mpk: "8e39a53227ccb0c3cffbed1c0013d4d63c74c1e01541b953ff021e91cb158330_39785418752_efe58861-8b9c-5e64-b0ee-85d9169acb44"
 vllm-args: --quantization awq_marlin --max-model-len 65536
 
 shim:
   domains:
-    - deepseek-r1-70b-64k.model.tinfoil.sh
+    - deepseek-r1-70b-prod.model.tinfoil.sh
   listen-port: 443
   upstream-port: 8080
   paths:
