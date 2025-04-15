@@ -14,6 +14,7 @@ shim:
     - deepseek-r1-70b-prod.model.tinfoil.sh
   listen-port: 443
   upstream-port: 8080
+  control-plane: https://api.tinfoil.sh
   paths:
     - /v1/chat/completions
     - /metrics
