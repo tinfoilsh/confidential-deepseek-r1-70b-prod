@@ -1,4 +1,4 @@
-cvm-version: 0.0.22
+cvm-version: 0.0.23
 ovmf-version: 0.0.2
 cpus: 8
 memory: 32768
@@ -11,10 +11,13 @@ vllm-args: --quantization awq_marlin --max-model-len 65536
 
 shim:
   domains:
-    - deepseek-r1-70b-prod.model.tinfoil.sh
+    - deepseek-r1-70b-p.model.tinfoil.sh
   listen-port: 443
   upstream-port: 8080
   control-plane: https://api.tinfoil.sh
   paths:
     - /v1/chat/completions
     - /metrics
+  origins:
+    - https://tinfoil.sh
+    - https://chat.tinfoil.sh
