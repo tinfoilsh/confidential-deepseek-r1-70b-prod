@@ -1,4 +1,4 @@
-shim-version: v0.1.7@sha256:4fe5815b418195907c3136f814fbaeed842f6d0bc25142de09ed27fa19b54723
+shim-version: v0.1.8@sha256:795145f871b66946ab7755eb71fce866a92e4035a95d6f949ad79adee7294648
 cvm-version: 0.1.3
 ovmf-version: 0.0.2
 cpus: 8
